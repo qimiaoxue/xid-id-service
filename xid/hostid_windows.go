@@ -3,6 +3,7 @@
 
 package xid
 
+/*
 import (
 	"fmt"
 	"syscall"
@@ -37,3 +38,4 @@ func readPlatformMachineID() (string, error) {
 
 	return hostID, nil
 }
+*/

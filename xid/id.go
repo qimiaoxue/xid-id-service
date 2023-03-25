@@ -49,6 +49,10 @@ func init() {
 		dec[encoding[i]] = byte(i)
 	}
 
+	/*
+		{48:0, 49:1, 50:2....97:11}
+	*/
+
 	// if /proc/self/cpuset exists and is not /, we can assume thar we are in a
 	// form of container and use the content of cpuset xor-ed with the PID in
 	// order get a reasonable machine global unique PID.
@@ -79,6 +83,13 @@ func readMachineID() []byte {
 	}
 	return id
 }
+
+/*
+struct ID {
+	high int32
+	low int64
+}
+*/
 
 func randInt() uint32 {
 	b := make([]byte, 3)
