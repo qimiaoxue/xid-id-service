@@ -16,7 +16,7 @@ Xid doesn't use base64 because case sensitivity and the 2 non alphanum chars may
 UUID are 16 bytes(128bits) and 36 chars as string representation. Twitter Snowflake ids are 8 bytes(64bits) but require machine/data-center configuration and/or central generator servers. Xid stands in between with 12 bytes(96 bits) and a more compact URL-safe string representation(20 chars). No configuration or central generator server is required so it can be used directly in server's code.
 
 | Name  | Binary Size  | String Size  | Features       |
-| :-------- | :------ | :----: |
+| :-------- | :-------- | :-------- | :-------- |
 | UUID | 16 bytes | 36 chars | configuration free, not sortable |
 | shortuuid | 16 bytes | 22 chars | configuration free, not sortable |
 | Snowflake | 8 bytes | up to 20 chars | needs machine/DC configuration, needs central server, sortable |
@@ -47,7 +47,9 @@ println(guid.String())
 
 Get xid embeded info:
 
+```go
 guid.Machine()
 guid.Pid()
 guid.Time()
 guid.Counter()
+```
