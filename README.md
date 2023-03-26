@@ -38,7 +38,7 @@ Notes:
 - Xid is dependent on the system time, a monotonic counter and so is not cryptographically secure. If unpredictability of IDs is important, you should use libraries that rely on cryptographically secure sources(like /dev/urandom on unix, crypto/rand in golang), if you want a truly random ID generator.
 
 # Install
-go get 
+go get github.com/qimiaoxue/xid-id-service 
 
 # Usage
 guid := xid.New()

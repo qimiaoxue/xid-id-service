@@ -1,4 +1,4 @@
-module id-service
+module github.com/qimiaoxue/xid-id-service 
 
 go 1.18
 
